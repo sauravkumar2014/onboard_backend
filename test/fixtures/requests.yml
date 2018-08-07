@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  RecruitInfo: one
+  type: 
+  message: MyString
+  status: 
+
+two:
+  RecruitInfo: two
+  type: 
+  message: MyString
+  status: 

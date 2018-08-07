@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  User: one
+  college: MyString
+  loc_pref: MyString
+  board_loc: MyString
+  doj: 2018-08-07
+  dob: 2018-08-07
+  uan: MyString
+  aadhar: MyString
+  pan: MyString
+  bank_name: MyString
+  bank_ac: MyString
+  ifsc: MyString
+
+two:
+  User: two
+  college: MyString
+  loc_pref: MyString
+  board_loc: MyString
+  doj: 2018-08-07
+  dob: 2018-08-07
+  uan: MyString
+  aadhar: MyString
+  pan: MyString
+  bank_name: MyString
+  bank_ac: MyString
+  ifsc: MyString
