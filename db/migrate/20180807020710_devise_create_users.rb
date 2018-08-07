@@ -33,10 +33,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       # t.datetime :locked_at
 
       t.string :role, default: "recruit", null: false
-      t.string :contact_no
-      t.string :address
-      t.string :gender
-      #t.string :alternate_contact
       t.timestamps null: false
     end
 
@@ -46,5 +42,3 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
     # add_index :users, :unlock_token,         unique: true
   end
 end
-
-#TODO: alternate_contact,

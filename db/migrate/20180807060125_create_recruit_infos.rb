@@ -14,12 +14,15 @@ class CreateRecruitInfos < ActiveRecord::Migration[5.0]
       t.string :bank_ac
       t.string :ifsc
       t.integer :user_id
-      #t.string :passport
-      #t.string :ac_no
+      t.string :passport
+      t.string :ac_no
+      t.string :contact_no
+      t.string :address
+      t.string :gender
+      t.string :alternate_contact
 
       t.timestamps
     end
     add_index "recruit_infos", ["user_id"], name: "index_recruit_infos_on_user_id"
   end
 end
-#TODO: passport,ac_no
