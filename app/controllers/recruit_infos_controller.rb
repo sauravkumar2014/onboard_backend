@@ -41,7 +41,10 @@ class RecruitInfosController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_recruit_info
-      @recruit_info = RecruitInfo.find(params[:id])
+      @recruit_info = RecruitInfo.where(:User_id => params[:id])
+      if @recruit_info
+        @recruit_info = @recruit_info.first
+      end
     end
 
     # Only allow a trusted parameter "white list" through.

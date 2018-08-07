@@ -10,12 +10,13 @@
 #   http://dev.mysql.com/doc/refman/5.7/en/old-client.html
 #
 default: &default
-  adapter: mysql2
-  encoding: utf8
-  pool: 5
-  username: root
-  password:
-  socket: /tmp/mysql.sock
+  url: mysql2://root:rootroot@onboarding.cd8ozkqdm9y9.us-west-2.rds.amazonaws.com:3306/on_board_app
+  # adapter: mysql2
+  # encoding: utf8
+  # pool: 5
+  # username: root
+  # password:
+  # socket: /tmp/mysql.sock
 
 development:
   <<: *default
@@ -40,7 +41,7 @@ test:
 # On Heroku and other platform providers, you may have a full connection URL
 # available as an environment variable. For example:
 #
-#   DATABASE_URL="mysql2://myuser:mypass@localhost/somedatabase"
+# DATABASE_URL="mysql2://root:rootroot@localhost/on_board_app"
 #
 # You can use this database configuration with:
 #

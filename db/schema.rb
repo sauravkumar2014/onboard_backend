@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20180807075712) do
 
-  create_table "documents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "documents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "cancelled_cheque"
     t.string   "pan"
     t.string   "aadhar"
@@ -23,15 +23,15 @@ ActiveRecord::Schema.define(version: 20180807075712) do
     t.integer  "recruit_info_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.index ["recruit_info_id"], name: "index_users_on_recruit_info_id", using: :btree
+    t.index ["recruit_info_id"], name: "index_documents_on_recruit_info_id", using: :btree
   end
 
-  create_table "jwt_blacklists", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "jwt_blacklists", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "jti", null: false
     t.index ["jti"], name: "index_jwt_blacklists_on_jti", using: :btree
   end
 
-  create_table "recruit_infos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "recruit_infos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "college"
     t.string   "loc_pref"
     t.string   "board_loc"
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20180807075712) do
     t.index ["user_id"], name: "index_recruit_infos_on_user_id", using: :btree
   end
 
-  create_table "requests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "requests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "type"
     t.string   "message"
     t.integer  "status"
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 20180807075712) do
     t.index ["recruit_info_id"], name: "index_requests_on_recruit_info_id", using: :btree
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "email",                  default: "",        null: false
     t.string   "encrypted_password",     default: "",        null: false
     t.string   "reset_password_token"
