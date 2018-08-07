@@ -36,7 +36,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :contact_no
       t.string :address
       t.string :gender
-      t.string :alternate_contact
+      #t.string :alternate_contact
       t.timestamps null: false
     end
 
